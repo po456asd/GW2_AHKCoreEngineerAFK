@@ -1,6 +1,7 @@
 SetKeyDelay, 0, 200
 
 F8::
+ToolTip, Bot Running.., 0, 0
 gosub, Loot
 gosub, Start6
 gosub, Start7
@@ -90,6 +91,7 @@ SetTimer Lootandreset8, Off
 SetTimer Start9, Off
 SetTimer Lootandreset9, Off
 SetTimer Loot, Off
+ToolTip, , 0, 0
 Return
 
 

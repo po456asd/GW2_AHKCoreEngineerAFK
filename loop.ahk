@@ -27,71 +27,71 @@ Return
 
 Start6:
 SetTimer Start6, Off
-Controlsend, ahk_parent, {6}, Guild Wars 2
+Controlsend, , {6}, Guild Wars 2
 sleep, 2500
 SetTimer Lootandreset6, 270000 ;start the Timer
 Return
 
 Start7:
 SetTimer Start7, Off
-Controlsend, ahk_parent, {7}, Guild Wars 2
+Controlsend, , {7}, Guild Wars 2
 sleep, 2500
 SetTimer Lootandreset7, 270000 ;start the Timer
 Return
 
 Start8:
 SetTimer Start8, Off
-Controlsend, ahk_parent, {8}, Guild Wars 2
+Controlsend, , {8}, Guild Wars 2
 sleep, 2500
 SetTimer Lootandreset8, 270000 ;start the Timer
 Return
 
 Start9:
 SetTimer Start9, Off
-Controlsend, ahk_parent, {9}, Guild Wars 2
+Controlsend, , {9}, Guild Wars 2
 sleep, 2500
 SetTimer Lootandreset9, 270000 ;start the Timer
 Return
 
 Lootandreset6:
 SetTimer Lootandreset6, Off
-Controlsend, ahk_parent, {.}, Guild Wars 2
+Controlsend, , {.}, Guild Wars 2
 sleep, 2500
-Controlsend, ahk_parent, {6}, Guild Wars 2
+Controlsend, , {6}, Guild Wars 2
 sleep, 2500
 SetTimer Start6, 22000 ;start the Timer
 Return
 
 Lootandreset7:
 SetTimer Lootandreset7, Off
-Controlsend, ahk_parent, {.}, Guild Wars 2
+Controlsend, , {.}, Guild Wars 2
 sleep, 2500
-Controlsend, ahk_parent, {7}, Guild Wars 2
+Controlsend, , {7}, Guild Wars 2
 sleep, 2500
 SetTimer Start7, 22000 ;start the Timer
 Return
 
 Lootandreset8:
 SetTimer Lootandreset8, Off
-Controlsend, ahk_parent, {.}, Guild Wars 2
+Controlsend, , {.}, Guild Wars 2
 sleep, 2500
-Controlsend, ahk_parent, {8}, Guild Wars 2
+Controlsend, , {8}, Guild Wars 2
 sleep, 2500
 SetTimer Start8, 42000 ;start the Timer
 Return
 
 Lootandreset9:
 SetTimer Lootandreset9, Off
-Controlsend, ahk_parent, {.}, Guild Wars 2
+Controlsend, , {.}, Guild Wars 2
 sleep, 2500
-Controlsend, ahk_parent, {9}, Guild Wars 2
+Controlsend, , {9}, Guild Wars 2
 sleep, 2500
 SetTimer Start9, 22000 ;start the Timer
 Return
 
 Loot:
 SetTimer Loot, Off
-Controlsend, ahk_parent, {.}, Guild Wars 2
+Controlsend, , {.}, Guild Wars 2
 sleep, 2000
 SetTimer Loot, 30000 ;start the Timer
 Return

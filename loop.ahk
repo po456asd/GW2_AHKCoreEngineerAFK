@@ -2,7 +2,7 @@ SetKeyDelay, 0, 200
 SetTitleMatchMode, 2
 
 F7::
-WinGet, gamepid, PID, A
+WinGet, gamepid, ID, A
 ToolTip, %gamepid%, 0, 0
 sleep 2500
 ToolTip, , 0, 0
@@ -18,12 +18,16 @@ F8::
 ;else {
 	ToolTip, Bot Running.., 0, 0
 	gosub, Loot
+	;gosub, swap
+	;gosub, attack
 	gosub, Start6
 	gosub, Start7
 	gosub, Start8
 	gosub, Start9
 ;}
 Return
+
+;#################################################################
 
 Start6:
 SetTimer Start6, Off
@@ -53,40 +57,86 @@ sleep, 2500
 SetTimer Lootandreset9, 270000 ;start the Timer
 Return
 
+;#################################################################
+
 Lootandreset6:
 SetTimer Lootandreset6, Off
-Controlsend, , {.}, Guild Wars 2
-sleep, 2500
-Controlsend, , {6}, Guild Wars 2
-sleep, 2500
-SetTimer Start6, 22000 ;start the Timer
+if (waiting = 1)
+{
+	SetTimer Lootandreset6, 1000 ;start the Timer
+}
+else
+{
+	waiting := "1"
+	Controlsend, , {.}, Guild Wars 2
+	Controlsend, , {6}, Guild Wars 2
+	sleep, 2500
+	waiting := "0"
+	SetTimer Start6, 23000 ;start the Timer
+}
 Return
 
 Lootandreset7:
 SetTimer Lootandreset7, Off
-Controlsend, , {.}, Guild Wars 2
-sleep, 2500
-Controlsend, , {7}, Guild Wars 2
-sleep, 2500
-SetTimer Start7, 22000 ;start the Timer
+if (waiting = 1)
+{
+	SetTimer Lootandreset7, 1000 ;start the Timer
+}
+else
+{
+	waiting := "1"
+	Controlsend, , {.}, Guild Wars 2
+	Controlsend, , {7}, Guild Wars 2
+	sleep, 2500
+	waiting := "0"
+	SetTimer Start7, 23000 ;start the Timer
+}
 Return
 
 Lootandreset8:
 SetTimer Lootandreset8, Off
-Controlsend, , {.}, Guild Wars 2
-sleep, 2500
-Controlsend, , {8}, Guild Wars 2
-sleep, 2500
-SetTimer Start8, 42000 ;start the Timer
+if (waiting = 1)
+{
+	SetTimer Lootandreset8, 1000 ;start the Timer
+}
+else
+{
+	waiting := "1"
+	Controlsend, , {.}, Guild Wars 2
+	Controlsend, , {8}, Guild Wars 2
+	sleep, 2500
+	waiting := "0"
+	SetTimer Start8, 43000 ;start the Timer
+}
 Return
 
 Lootandreset9:
 SetTimer Lootandreset9, Off
-Controlsend, , {.}, Guild Wars 2
-sleep, 2500
-Controlsend, , {9}, Guild Wars 2
-sleep, 2500
-SetTimer Start9, 22000 ;start the Timer
+if (waiting = 1)
+{
+	SetTimer Lootandreset9, 1000 ;start the Timer
+}
+else
+{
+	waiting := "1"
+	Controlsend, , {.}, Guild Wars 2
+	Controlsend, , {9}, Guild Wars 2
+	sleep, 2500
+	waiting := "0"
+	SetTimer Start9, 23000 ;start the Timer
+}
+Return
+
+attack:
+SetTimer attack, Off
+Controlsend, , {1}, Guild Wars 2
+SetTimer attack, 100 ;start the Timer
+Return
+
+swap:
+SetTimer swap, Off
+Controlsend, , {tab}, Guild Wars 2
+SetTimer swap, 1000 ;start the Timer
 Return
 
 Loot:
@@ -96,8 +146,16 @@ sleep, 2000
 SetTimer Loot, 30000 ;start the Timer
 Return
 
+Lootsemi:
+SetTimer Lootsemi, Off
+Controlsend, , {.}, Guild Wars 2
+SetTimer Lootsemi, 1000 ;start the Timer
+Return
+
 ; #### stops the Timer by pressing the left mouse button ####
 F9::
+SetTimer attack, Off
+SetTimer swap, Off
 SetTimer Start6, Off
 SetTimer Lootandreset6, Off
 SetTimer Start7, Off
@@ -107,6 +165,7 @@ SetTimer Lootandreset8, Off
 SetTimer Start9, Off
 SetTimer Lootandreset9, Off
 SetTimer Loot, Off
+SetTimer Lootsemi, Off
 ToolTip, , 0, 0
 Return
 
@@ -127,5 +186,6 @@ if errorlevel = 2
 Return
 
 F10::
-gosub, Loot
+ToolTip, Loot Semi, 0, 0
+gosub, Lootsemi
 Return

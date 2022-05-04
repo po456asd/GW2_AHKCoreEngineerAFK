@@ -9,13 +9,13 @@ ToolTip, , 0, 0
 Return
 
 F8::
-;if ( gamepid < 1 ) {
-;	ToolTip, use F7 to get windows pid first, 0, 0
-;	sleep 2500
-;	ToolTip, , 0, 0
-;	return
-;}
-;else {
+if ( gamepid < 1 ) {
+	ToolTip, use F7 to get windows pid first, 0, 0
+	sleep 2500
+	ToolTip, , 0, 0
+	return
+}
+else {
 	ToolTip, Bot Running.., 0, 0
 	gosub, Loot
 	;gosub, swap
@@ -24,35 +24,35 @@ F8::
 	gosub, Start7
 	gosub, Start8
 	gosub, Start9
-;}
+}
 Return
 
 ;#################################################################
 
 Start6:
 SetTimer Start6, Off
-Controlsend, , {6}, Guild Wars 2
+Controlsend, ahk_parent,{6}, ahk_id %gamepid%
 sleep, 2500
 SetTimer Lootandreset6, 270000 ;start the Timer
 Return
 
 Start7:
 SetTimer Start7, Off
-Controlsend, , {7}, Guild Wars 2
+Controlsend, ahk_parent,{7}, ahk_id %gamepid%
 sleep, 2500
 SetTimer Lootandreset7, 270000 ;start the Timer
 Return
 
 Start8:
 SetTimer Start8, Off
-Controlsend, , {8}, Guild Wars 2
+Controlsend, ahk_parent,{8}, ahk_id %gamepid%
 sleep, 2500
 SetTimer Lootandreset8, 270000 ;start the Timer
 Return
 
 Start9:
 SetTimer Start9, Off
-Controlsend, , {9}, Guild Wars 2
+Controlsend, ahk_parent,{9}, ahk_id %gamepid%
 sleep, 2500
 SetTimer Lootandreset9, 270000 ;start the Timer
 Return
@@ -68,8 +68,8 @@ if (waiting = 1)
 else
 {
 	waiting := "1"
-	Controlsend, , {.}, Guild Wars 2
-	Controlsend, , {6}, Guild Wars 2
+	Controlsend, ahk_parent,{.}, ahk_id %gamepid%
+	Controlsend, ahk_parent,{6}, ahk_id %gamepid%
 	sleep, 2500
 	waiting := "0"
 	SetTimer Start6, 23000 ;start the Timer
@@ -85,8 +85,8 @@ if (waiting = 1)
 else
 {
 	waiting := "1"
-	Controlsend, , {.}, Guild Wars 2
-	Controlsend, , {7}, Guild Wars 2
+	Controlsend, ahk_parent,{.}, ahk_id %gamepid%
+	Controlsend, ahk_parent,{7}, ahk_id %gamepid%
 	sleep, 2500
 	waiting := "0"
 	SetTimer Start7, 23000 ;start the Timer
@@ -102,8 +102,8 @@ if (waiting = 1)
 else
 {
 	waiting := "1"
-	Controlsend, , {.}, Guild Wars 2
-	Controlsend, , {8}, Guild Wars 2
+	Controlsend, ahk_parent,{.}, ahk_id %gamepid%
+	Controlsend, ahk_parent,{8}, ahk_id %gamepid%
 	sleep, 2500
 	waiting := "0"
 	SetTimer Start8, 43000 ;start the Timer
@@ -119,8 +119,8 @@ if (waiting = 1)
 else
 {
 	waiting := "1"
-	Controlsend, , {.}, Guild Wars 2
-	Controlsend, , {9}, Guild Wars 2
+	Controlsend, ahk_parent,{.}, ahk_id %gamepid%
+	Controlsend, ahk_parent,{9}, ahk_id %gamepid%
 	sleep, 2500
 	waiting := "0"
 	SetTimer Start9, 23000 ;start the Timer
@@ -129,26 +129,26 @@ Return
 
 attack:
 SetTimer attack, Off
-Controlsend, , {1}, Guild Wars 2
+Controlsend, ahk_parent,{1}, ahk_id %gamepid%
 SetTimer attack, 100 ;start the Timer
 Return
 
 swap:
 SetTimer swap, Off
-Controlsend, , {tab}, Guild Wars 2
+Controlsend, ahk_parent,{tab}, ahk_id %gamepid%
 SetTimer swap, 1000 ;start the Timer
 Return
 
 Loot:
 SetTimer Loot, Off
-Controlsend, , {.}, Guild Wars 2
+Controlsend, ahk_parent,{.}, ahk_id %gamepid%
 sleep, 2000
 SetTimer Loot, 30000 ;start the Timer
 Return
 
 Lootsemi:
 SetTimer Lootsemi, Off
-Controlsend, , {.}, Guild Wars 2
+Controlsend, ahk_parent,{.}, ahk_id %gamepid%
 SetTimer Lootsemi, 1000 ;start the Timer
 Return
 

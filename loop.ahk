@@ -31,28 +31,28 @@ Return
 
 Start6:
 SetTimer Start6, Off
-Controlsend, ahk_parent,{6}, ahk_id %gamepid%
+Controlsend, ahk_parent,{numpad6}, ahk_id %gamepid%
 sleep, 2500
 SetTimer Lootandreset6, 270000 ;start the Timer
 Return
 
 Start7:
 SetTimer Start7, Off
-Controlsend, ahk_parent,{7}, ahk_id %gamepid%
+Controlsend, ahk_parent,{numpad7}, ahk_id %gamepid%
 sleep, 2500
 SetTimer Lootandreset7, 270000 ;start the Timer
 Return
 
 Start8:
 SetTimer Start8, Off
-Controlsend, ahk_parent,{8}, ahk_id %gamepid%
+Controlsend, ahk_parent,{numpad8}, ahk_id %gamepid%
 sleep, 2500
 SetTimer Lootandreset8, 270000 ;start the Timer
 Return
 
 Start9:
 SetTimer Start9, Off
-Controlsend, ahk_parent,{9}, ahk_id %gamepid%
+Controlsend, ahk_parent,{numpad9}, ahk_id %gamepid%
 sleep, 2500
 SetTimer Lootandreset9, 270000 ;start the Timer
 Return
@@ -68,8 +68,8 @@ if (waiting = 1)
 else
 {
 	waiting := "1"
-	Controlsend, ahk_parent,{.}, ahk_id %gamepid%
-	Controlsend, ahk_parent,{6}, ahk_id %gamepid%
+	Controlsend, ahk_parent,{numpad0}, ahk_id %gamepid%
+	Controlsend, ahk_parent,{numpad6}, ahk_id %gamepid%
 	sleep, 2500
 	waiting := "0"
 	SetTimer Start6, 23000 ;start the Timer
@@ -85,8 +85,8 @@ if (waiting = 1)
 else
 {
 	waiting := "1"
-	Controlsend, ahk_parent,{.}, ahk_id %gamepid%
-	Controlsend, ahk_parent,{7}, ahk_id %gamepid%
+	Controlsend, ahk_parent,{numpad0}, ahk_id %gamepid%
+	Controlsend, ahk_parent,{numpad7}, ahk_id %gamepid%
 	sleep, 2500
 	waiting := "0"
 	SetTimer Start7, 23000 ;start the Timer
@@ -102,8 +102,8 @@ if (waiting = 1)
 else
 {
 	waiting := "1"
-	Controlsend, ahk_parent,{.}, ahk_id %gamepid%
-	Controlsend, ahk_parent,{8}, ahk_id %gamepid%
+	Controlsend, ahk_parent,{numpad0}, ahk_id %gamepid%
+	Controlsend, ahk_parent,{numpad8}, ahk_id %gamepid%
 	sleep, 2500
 	waiting := "0"
 	SetTimer Start8, 43000 ;start the Timer
@@ -119,8 +119,8 @@ if (waiting = 1)
 else
 {
 	waiting := "1"
-	Controlsend, ahk_parent,{.}, ahk_id %gamepid%
-	Controlsend, ahk_parent,{9}, ahk_id %gamepid%
+	Controlsend, ahk_parent,{numpad0}, ahk_id %gamepid%
+	Controlsend, ahk_parent,{numpad9}, ahk_id %gamepid%
 	sleep, 2500
 	waiting := "0"
 	SetTimer Start9, 23000 ;start the Timer
@@ -141,14 +141,14 @@ Return
 
 Loot:
 SetTimer Loot, Off
-Controlsend, ahk_parent,{.}, ahk_id %gamepid%
+Controlsend, ahk_parent,{numpad0}, ahk_id %gamepid%
 sleep, 2000
 SetTimer Loot, 30000 ;start the Timer
 Return
 
 Lootsemi:
 SetTimer Lootsemi, Off
-Controlsend, ahk_parent,{.}, ahk_id %gamepid%
+Controlsend, ahk_parent,{numpad0}, ahk_id %gamepid%
 SetTimer Lootsemi, 1000 ;start the Timer
 Return
 

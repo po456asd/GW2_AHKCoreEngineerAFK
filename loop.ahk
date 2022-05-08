@@ -19,7 +19,7 @@ else {
 	ToolTip, Bot Running.., 0, 0
 	gosub, Loot
 	;gosub, swap
-	;gosub, attack
+	gosub, attack
 	gosub, Start6
 	gosub, Start7
 	gosub, Start8
@@ -129,7 +129,7 @@ Return
 
 attack:
 SetTimer attack, Off
-Controlsend, ahk_parent,{1}, ahk_id %gamepid%
+Controlsend, ahk_parent,{numpad1}, ahk_id %gamepid%
 SetTimer attack, 100 ;start the Timer
 Return
 

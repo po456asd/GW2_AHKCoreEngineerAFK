@@ -1,6 +1,8 @@
 SetKeyDelay, 0, 200
 SetTitleMatchMode, 2
 
+attack := "yes"
+
 F7::
 WinGet, gamepid, ID, A
 ToolTip, %gamepid%, 0, 0
@@ -19,11 +21,13 @@ else {
 	ToolTip, Bot Running.., 0, 0
 	gosub, Loot
 	;gosub, swap
-	gosub, attack
 	gosub, Start6
 	gosub, Start7
 	gosub, Start8
 	gosub, Start9
+	if ( attack = "yes" ) {
+	gosub, attack
+	}
 }
 Return
 
@@ -31,36 +35,63 @@ Return
 
 Start6:
 SetTimer Start6, Off
+if ( attack = "yes" ) {
+	SetTimer attack, Off
+}
 Controlsend, ahk_parent,{numpad6}, ahk_id %gamepid%
 sleep, 2500
 SetTimer Lootandreset6, 270000 ;start the Timer
+if ( attack = "yes" ) {
+	SetTimer attack, 100
+}
 Return
 
 Start7:
 SetTimer Start7, Off
+if ( attack = "yes" ) {
+	SetTimer attack, Off
+}
 Controlsend, ahk_parent,{numpad7}, ahk_id %gamepid%
 sleep, 2500
 SetTimer Lootandreset7, 270000 ;start the Timer
+if ( attack = "yes" ) {
+	SetTimer attack, 100
+}
 Return
 
 Start8:
 SetTimer Start8, Off
+if ( attack = "yes" ) {
+	SetTimer attack, Off
+}
 Controlsend, ahk_parent,{numpad8}, ahk_id %gamepid%
 sleep, 2500
 SetTimer Lootandreset8, 270000 ;start the Timer
+if ( attack = "yes" ) {
+	SetTimer attack, 100
+}
 Return
 
 Start9:
 SetTimer Start9, Off
+if ( attack = "yes" ) {
+	SetTimer attack, Off
+}
 Controlsend, ahk_parent,{numpad9}, ahk_id %gamepid%
 sleep, 2500
 SetTimer Lootandreset9, 270000 ;start the Timer
+if ( attack = "yes" ) {
+	SetTimer attack, 100
+}
 Return
 
 ;#################################################################
 
 Lootandreset6:
 SetTimer Lootandreset6, Off
+if ( attack = "yes" ) {
+	SetTimer attack, Off
+}
 if (waiting = 1)
 {
 	SetTimer Lootandreset6, 1000 ;start the Timer
@@ -74,10 +105,16 @@ else
 	waiting := "0"
 	SetTimer Start6, 23000 ;start the Timer
 }
+if ( attack = "yes" ) {
+	SetTimer attack, 100
+}
 Return
 
 Lootandreset7:
 SetTimer Lootandreset7, Off
+if ( attack = "yes" ) {
+	SetTimer attack, Off
+}
 if (waiting = 1)
 {
 	SetTimer Lootandreset7, 1000 ;start the Timer
@@ -91,10 +128,16 @@ else
 	waiting := "0"
 	SetTimer Start7, 23000 ;start the Timer
 }
+if ( attack = "yes" ) {
+	SetTimer attack, 100
+}
 Return
 
 Lootandreset8:
 SetTimer Lootandreset8, Off
+if ( attack = "yes" ) {
+	SetTimer attack, Off
+}
 if (waiting = 1)
 {
 	SetTimer Lootandreset8, 1000 ;start the Timer
@@ -108,10 +151,16 @@ else
 	waiting := "0"
 	SetTimer Start8, 43000 ;start the Timer
 }
+if ( attack = "yes" ) {
+	SetTimer attack, 100
+}
 Return
 
 Lootandreset9:
 SetTimer Lootandreset9, Off
+if ( attack = "yes" ) {
+	SetTimer attack, Off
+}
 if (waiting = 1)
 {
 	SetTimer Lootandreset9, 1000 ;start the Timer
@@ -124,6 +173,9 @@ else
 	sleep, 2500
 	waiting := "0"
 	SetTimer Start9, 23000 ;start the Timer
+}
+if ( attack = "yes" ) {
+	SetTimer attack, 100
 }
 Return
 

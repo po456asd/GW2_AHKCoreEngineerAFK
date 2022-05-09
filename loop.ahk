@@ -1,7 +1,7 @@
 SetKeyDelay, 0, 200
 SetTitleMatchMode, 2
 
-attack := "yes"
+attack := "no"
 
 F7::
 WinGet, gamepid, ID, A

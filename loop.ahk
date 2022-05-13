@@ -40,7 +40,7 @@ if ( attack = "yes" ) {
 }
 Controlsend, ahk_parent,{numpad6}, ahk_id %gamepid%
 sleep, 2500
-SetTimer Lootandreset6, 270000 ;start the Timer
+SetTimer Start6, 330000 ;start the Timer
 if ( attack = "yes" ) {
 	SetTimer attack, 100
 }
@@ -53,7 +53,7 @@ if ( attack = "yes" ) {
 }
 Controlsend, ahk_parent,{numpad7}, ahk_id %gamepid%
 sleep, 2500
-SetTimer Lootandreset7, 270000 ;start the Timer
+SetTimer Start7, 330000 ;start the Timer
 if ( attack = "yes" ) {
 	SetTimer attack, 100
 }
@@ -66,7 +66,7 @@ if ( attack = "yes" ) {
 }
 Controlsend, ahk_parent,{numpad8}, ahk_id %gamepid%
 sleep, 2500
-SetTimer Lootandreset8, 270000 ;start the Timer
+SetTimer Start8, 350000 ;start the Timer
 if ( attack = "yes" ) {
 	SetTimer attack, 100
 }
@@ -79,7 +79,7 @@ if ( attack = "yes" ) {
 }
 Controlsend, ahk_parent,{numpad9}, ahk_id %gamepid%
 sleep, 2500
-SetTimer Lootandreset9, 270000 ;start the Timer
+SetTimer Start9, 330000 ;start the Timer
 if ( attack = "yes" ) {
 	SetTimer attack, 100
 }

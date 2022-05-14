@@ -3,6 +3,10 @@ SetTitleMatchMode, 2
 
 attack := "no"
 
+randomwait:
+Random, rand, 2000, 5000
+return
+
 F7::
 WinGet, gamepid, ID, A
 ToolTip, %gamepid%, 0, 0
@@ -36,53 +40,93 @@ Return
 
 Start6:
 SetTimer Start6, Off
-if ( attack = "yes" ) {
-	SetTimer attack, Off
+if (waiting = 1)
+{
+	SetTimer Start6, 1000 ;start the Timer
 }
-Controlsend, ahk_parent,{numpad6}, ahk_id %gamepid%
-sleep, 2500
-SetTimer Start6, 330000 ;start the Timer
-if ( attack = "yes" ) {
-	SetTimer attack, 100
+else
+{
+	waiting := "1"
+	if ( attack = "yes" ) {
+		SetTimer attack, Off
+	}
+	Controlsend, ahk_parent,{numpad6}, ahk_id %gamepid%
+	sleep, 2500
+	gosub, randomwait
+	if ( attack = "yes" ) {
+		SetTimer attack, 100
+	}
+	waiting := "0"
+	SetTimer Start6, 320000 + %rand% ;start the Timer
 }
 Return
 
 Start7:
 SetTimer Start7, Off
-if ( attack = "yes" ) {
-	SetTimer attack, Off
+if (waiting = 1)
+{
+	SetTimer Start7, 1000 ;start the Timer
 }
-Controlsend, ahk_parent,{numpad7}, ahk_id %gamepid%
-sleep, 2500
-SetTimer Start7, 330000 ;start the Timer
-if ( attack = "yes" ) {
-	SetTimer attack, 100
+else
+{
+	waiting := "1"
+	if ( attack = "yes" ) {
+		SetTimer attack, Off
+	}
+	Controlsend, ahk_parent,{numpad7}, ahk_id %gamepid%
+	sleep, 2500
+	gosub, randomwait
+	if ( attack = "yes" ) {
+		SetTimer attack, 100
+	}
+	waiting := "0"
+	SetTimer Start7, 320000 + %rand% ;start the Timer
 }
 Return
 
 Start8:
 SetTimer Start8, Off
-if ( attack = "yes" ) {
-	SetTimer attack, Off
+if (waiting = 1)
+{
+	SetTimer Start8, 1000 ;start the Timer
 }
-Controlsend, ahk_parent,{numpad8}, ahk_id %gamepid%
-sleep, 2500
-SetTimer Start8, 350000 ;start the Timer
-if ( attack = "yes" ) {
-	SetTimer attack, 100
+else
+{
+	waiting := "1"
+	if ( attack = "yes" ) {
+		SetTimer attack, Off
+	}
+	Controlsend, ahk_parent,{numpad8}, ahk_id %gamepid%
+	sleep, 2500
+	gosub, randomwait
+	if ( attack = "yes" ) {
+		SetTimer attack, 100
+	}
+	waiting := "0"
+	SetTimer Start8, 320000 + %rand% ;start the Timer
 }
 Return
 
 Start9:
 SetTimer Start9, Off
-if ( attack = "yes" ) {
-	SetTimer attack, Off
+if (waiting = 1)
+{
+	SetTimer Start9, 1000 ;start the Timer
 }
-Controlsend, ahk_parent,{numpad9}, ahk_id %gamepid%
-sleep, 2500
-SetTimer Start9, 330000 ;start the Timer
-if ( attack = "yes" ) {
-	SetTimer attack, 100
+else
+{
+	waiting := "1"
+	if ( attack = "yes" ) {
+		SetTimer attack, Off
+	}
+	Controlsend, ahk_parent,{numpad9}, ahk_id %gamepid%
+	sleep, 2500
+	gosub, randomwait
+	if ( attack = "yes" ) {
+		SetTimer attack, 100
+	}
+	waiting := "0"
+	SetTimer Start9, 320000 + %rand% ;start the Timer
 }
 Return
 

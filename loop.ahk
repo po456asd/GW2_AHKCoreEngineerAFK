@@ -1,3 +1,5 @@
+;Legendary Engineerz
+
 SetKeyDelay, 0, 200
 SetTitleMatchMode, 2
 

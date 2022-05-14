@@ -57,7 +57,8 @@ else
 		SetTimer attack, 100
 	}
 	waiting := "0"
-	SetTimer Start6, 320000 + %rand% ;start the Timer
+	sleep, %rand%
+	SetTimer Start6, 320000 ;start the Timer
 }
 Return
 
@@ -80,7 +81,8 @@ else
 		SetTimer attack, 100
 	}
 	waiting := "0"
-	SetTimer Start7, 320000 + %rand% ;start the Timer
+	sleep, %rand%
+	SetTimer Start7, 320000 ;start the Timer
 }
 Return
 
@@ -103,7 +105,8 @@ else
 		SetTimer attack, 100
 	}
 	waiting := "0"
-	SetTimer Start8, 320000 + %rand% ;start the Timer
+	sleep, %rand%
+	SetTimer Start8, 320000 ;start the Timer
 }
 Return
 
@@ -126,9 +129,12 @@ else
 		SetTimer attack, 100
 	}
 	waiting := "0"
-	SetTimer Start9, 320000 + %rand% ;start the Timer
+	sleep, %rand%
+	SetTimer Start9, 320000 ;start the Timer
 }
 Return
+
+
 
 ;#################################################################
 

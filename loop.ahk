@@ -25,8 +25,9 @@ else {
 	gosub, Start7
 	gosub, Start8
 	gosub, Start9
-	if ( attack = "yes" ) {
-	gosub, attack
+	if ( attack = "yes" )
+	{
+		gosub, attack
 	}
 }
 Return
@@ -221,6 +222,11 @@ SetTimer Lootsemi, Off
 ToolTip, , 0, 0
 Return
 
+F10::
+ToolTip, Loot Semi, 0, 0
+gosub, Lootsemi
+Return
+
 Imagesearch:
 ImageSearch, , , 997, 976, 1294, 1073, *75 *Trans0xFFFFFF Image\%imagename%.png
 if errorlevel = 0 
@@ -235,9 +241,4 @@ if errorlevel = 2
 {
 	ToolTip, Failed to open Image, 0, 0
 }
-Return
-
-F10::
-ToolTip, Loot Semi, 0, 0
-gosub, Lootsemi
 Return

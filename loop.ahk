@@ -25,16 +25,16 @@ if ( gamepid < 1 ) {
 }
 else {
 	ToolTip, Bot Running.., 0, 0
-	gosub, Loot
-	;gosub, swap
-	gosub, Start6
-	gosub, Start7
-	gosub, Start8
-	gosub, Start9
+	SetTimer Start6, 100
+	SetTimer Start7, 100
+	SetTimer Start8, 100
+	SetTimer Start9, 100	
+	SetTimer Loot, 100
 	if ( attack = "yes" )
 	{
-		gosub, attack
+		SetTimer attack, 100
 	}
+	;gosub, swap
 }
 Return
 

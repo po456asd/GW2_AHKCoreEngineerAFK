@@ -3,13 +3,6 @@ SetTitleMatchMode, 2
 
 attack := "no"
 
-randomwait:
-Random, rand, 2000, 5000
-Tooltip, rand %rand%., 0, 0
-sleep 500
-ToolTip, Bot Running.., 0, 0
-return
-
 F7::
 WinGet, gamepid, ID, A
 ToolTip, %gamepid%, 0, 0
@@ -295,3 +288,10 @@ if errorlevel = 2
 	ToolTip, Failed to open Image, 0, 0
 }
 Return
+
+randomwait:
+Random, rand, 2000, 5000
+Tooltip, rand %rand%., 0, 0
+sleep 500
+ToolTip, Bot Running.., 0, 0
+return

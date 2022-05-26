@@ -1,5 +1,3 @@
-;Legendary Engineerz
-
 SetKeyDelay, 0, 200
 SetTitleMatchMode, 2
 
@@ -7,6 +5,9 @@ attack := "no"
 
 randomwait:
 Random, rand, 2000, 5000
+Tooltip, rand %rand%., 0, 0
+sleep 500
+ToolTip, Bot Running.., 0, 0
 return
 
 F7::
@@ -28,7 +29,7 @@ else {
 	SetTimer Start6, 100
 	SetTimer Start7, 100
 	SetTimer Start8, 100
-	SetTimer Start9, 100	
+	;SetTimer Start9, 100	
 	SetTimer Loot, 100
 	if ( attack = "yes" )
 	{
@@ -108,7 +109,7 @@ else
 	}
 	waiting := "0"
 	sleep, %rand%
-	SetTimer Start8, 320000 ;start the Timer
+	SetTimer Start8, 340000 ;start the Timer
 }
 Return
 

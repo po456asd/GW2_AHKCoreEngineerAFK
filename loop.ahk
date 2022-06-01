@@ -22,7 +22,7 @@ else {
 	SetTimer Start6, 100
 	SetTimer Start7, 100
 	SetTimer Start8, 100
-	;SetTimer Start9, 100	
+	SetTimer Start9, 100	
 	SetTimer Loot, 100
 	if ( attack = "yes" )
 	{
@@ -129,8 +129,6 @@ else
 	SetTimer Start9, 320000 ;start the Timer
 }
 Return
-
-
 
 ;#################################################################
 
@@ -253,19 +251,20 @@ Return
 
 ; #### stops the Timer by pressing the left mouse button ####
 F9::
-SetTimer attack, Off
-SetTimer swap, Off
-SetTimer Start6, Off
-SetTimer Lootandreset6, Off
-SetTimer Start7, Off
-SetTimer Lootandreset7, Off
-SetTimer Start8, Off
-SetTimer Lootandreset8, Off
-SetTimer Start9, Off
-SetTimer Lootandreset9, Off
-SetTimer Loot, Off
-SetTimer Lootsemi, Off
+;SetTimer attack, Off
+;SetTimer swap, Off
+;SetTimer Start6, Off
+;SetTimer Lootandreset6, Off
+;SetTimer Start7, Off
+;SetTimer Lootandreset7, Off
+;SetTimer Start8, Off
+;SetTimer Lootandreset8, Off
+;SetTimer Start9, Off
+;SetTimer Lootandreset9, Off
+;SetTimer Loot, Off
+;SetTimer Lootsemi, Off
 ToolTip, , 0, 0
+Reload
 Return
 
 F10::
